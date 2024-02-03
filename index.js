@@ -1,8 +1,9 @@
 "use strict";
 const outPut = document.querySelector('.number-output');
+let deleteBtn = document.querySelector('.deletebtn');
 let a;
 let b;
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.number');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         outPut.textContent += button.textContent;
