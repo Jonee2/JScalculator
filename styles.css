@@ -46,7 +46,7 @@ button:hover {
     background: #F9F5EB;
     cursor: pointer;
 }
-.clearbtn {
+.clearbtn, .deletebtn{
     width:170px;
     border-radius: 5px;
 }
