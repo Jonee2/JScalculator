@@ -1,12 +1,5 @@
 let output = <HTMLOutputElement> document.querySelector('.number-output')
-const deleteBtn = <HTMLButtonElement>document.querySelector('.deletebtn')
-let clearBtn = document.querySelector('.clearbtn')
-let operandBtn = document.querySelector('.operand')
-const buttons = document.querySelectorAll('.number');
-
-let a = '0'
-let b = '0'
-let operator = ''
+const deleteBtn = <HTMLButtonElement> document.querySelector('.deletebtn')
 
 
 
@@ -26,10 +19,10 @@ function clearDisplay() {
 
 
 function deleteDisplay() {
-    output.innerText.slice(0,-1)
+    output.textContent.slice(0,-1)
 }
 function calculate() {
-    output.textContent = eval(output.value)
+    output.textContent = eval(output.textContent)
 }
 
 
