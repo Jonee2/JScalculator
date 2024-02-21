@@ -11,7 +11,8 @@ buttons.forEach((button) => {
         output.textContent += button.textContent;
     });
 });
-function clearDisplay() { output.textContent = ""; }
+
+function clearDisplay() { output.textContent = "0"; }
 function deleteDisplay() {
     output.textContent = output.textContent.slice(0, -1);
 }
