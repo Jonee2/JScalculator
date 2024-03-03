@@ -1,29 +1,37 @@
 let output = <HTMLOutputElement> document.querySelector('.number-output')
 const deleteBtn = <HTMLButtonElement> document.querySelector('.deletebtn')
 const buttons = document.querySelectorAll('.number')
-const clearbtn = document.querySelector('clearbtn')
-let a = '0'
-let b = '0'
-let op = ''
+const clearbtn = document.querySelector('.clearbtn')
 
 buttons.forEach((button) => {
     button.addEventListener('click', function() {
-    output.textContent += button.textContent
+        output.textContent += button.textContent
+        if (output.textContent === '0') {
+            deleteDisplay()
+        }
     });
-  });
+    });
+
     
-function clearDisplay() {output.textContent = "";} 
+function clearDisplay() {
+    output.textContent = "0"
+} 
 
 function deleteDisplay() {
 output.textContent = output.textContent.slice(0,-1)
 }
 
-function calculate() {output.textContent = eval(output.innerText)}
+function calculate() {
+    output.textContent = eval(output.innerText)
+}
 
-document.addEventListener('keypress', (event) => {displayKey(event.key)})
+document.addEventListener('keypress', (event) => {
+    displayKey(event.key)
+})
 
  function displayKey(key:string) {
-     switch (key) {
+     
+    switch (key) {
          
         case "1":
          output.textContent += '1'
