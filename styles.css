@@ -6,6 +6,7 @@ body{
     display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
 font-family: 'Roboto Mono', monospace;
     text-align: center;
     text-decoration: none;

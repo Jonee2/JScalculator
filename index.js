@@ -20,7 +20,7 @@ function deleteDisplay() {
 function calculate() {
     output.textContent = eval(output.innerText);
 }
-document.addEventListener('keypress', (event) => {
+document.addEventListener('keydown', (event) => {
     displayKey(event.key);
 });
 function displayKey(key) {
@@ -30,6 +30,9 @@ function displayKey(key) {
     switch (key) {
         case "Backspace":
             deleteDisplay();
+            break;
+        case "Enter":
+            clearDisplay();
             break;
         case "1":
             output.textContent += '1';

@@ -25,7 +25,7 @@ function calculate() {
     output.textContent = eval(output.innerText)
 }
 
-document.addEventListener('keypress', (event) => {
+document.addEventListener('keydown', (event) => {
     displayKey(event.key)
 })
 
@@ -36,8 +36,12 @@ document.addEventListener('keypress', (event) => {
     switch (key) {
          case "Backspace":
          deleteDisplay()
-             break; 
-
+            break; 
+        
+        case "Enter":
+         clearDisplay()
+            break;
+        
         case "1":
          output.textContent += '1'
              break;
