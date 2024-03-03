@@ -5,10 +5,10 @@ const buttons = document.querySelectorAll('.number');
 const clearbtn = document.querySelector('.clearbtn');
 buttons.forEach((button) => {
     button.addEventListener('click', function () {
-        output.textContent += button.textContent;
         if (output.textContent === '0') {
             deleteDisplay();
         }
+        output.textContent += button.textContent;
     });
 });
 function clearDisplay() {
@@ -24,7 +24,13 @@ document.addEventListener('keypress', (event) => {
     displayKey(event.key);
 });
 function displayKey(key) {
+    if (output.textContent === '0') {
+        deleteDisplay();
+    }
     switch (key) {
+        case "Backspace":
+            deleteDisplay();
+            break;
         case "1":
             output.textContent += '1';
             break;
